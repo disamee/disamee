@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bg-glow-1" cx="20%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#0f2b48" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#070c14" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#05080f" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="bg-glow-2" cx="85%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#064e6b" stop-opacity="0.45"/>
+      <stop offset="70%" stop-color="#05080f" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#00f0ff"/>
+    </linearGradient>
+    <linearGradient id="emerald-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="node-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Drop Shadows and Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4"/>
+      <circle cx="30" cy="0" r="1" fill="#334155" fill-opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif; }
+    .pulse-dot { animation: pulse 2s infinite ease-in-out; }
+    .flow-line { stroke-dasharray: 8 6; animation: dash 20s linear infinite; }
+    .data-packet { animation: travel 4s infinite linear; }
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(0.85); } }
+    @keyframes dash { to { stroke-dashoffset: -200; } }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="420" fill="#070c14" rx="16"/>
+  <rect width="1200" height="420" fill="url(#bg-glow-1)" rx="16"/>
+  <rect width="1200" height="420" fill="url(#bg-glow-2)" rx="16"/>
+  <rect width="1200" height="420" fill="url(#grid)" rx="16"/>
+
+  <!-- Border Highlight -->
+  <rect width="1198" height="418" x="1" y="1" rx="15" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-opacity="0.8"/>
+  <path d="M 1 80 L 1 16 Q 1 1 16 1 L 120 1" fill="none" stroke="#00f0ff" stroke-width="2.5" stroke-opacity="0.8"/>
+  <path d="M 1199 340 L 1199 404 Q 1199 419 1184 419 L 1080 419" fill="none" stroke="#10b981" stroke-width="2.5" stroke-opacity="0.8"/>
+
+  <!-- ==================== LEFT COLUMN: BIO & POSITIONING ==================== -->
+
+  <!-- Availability Status Badge -->
+  <g transform="translate(60, 48)">
+    <rect width="390" height="30" rx="15" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <circle cx="18" cy="15" r="4.5" fill="#10b981" class="pulse-dot">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="32" y="19" class="mono" font-size="11.5" font-weight="600" fill="#34d399" letter-spacing="0.08em">OPEN TO STAFF / SENIOR AI &amp; SYSTEMS ROLES</text>
+  </g>
+
+  <!-- Name / Title -->
+  <text x="60" y="132" class="sans" font-size="46" font-weight="800" fill="url(#text-grad)" letter-spacing="-0.03em">D. MEIRAM</text>
+
+  <!-- Subtitle / Role -->
+  <text x="60" y="170" class="sans" font-size="20" font-weight="600" fill="url(#cyan-grad)" letter-spacing="-0.01em">Staff AI &amp; Distributed Systems Engineer</text>
+
+  <!-- Value Proposition Description -->
+  <text x="60" y="210" class="sans" font-size="14.5" font-weight="400" fill="#94a3b8" line-height="1.5">
+    Architecting production-grade <tspan fill="#f1f5f9" font-weight="600">Enterprise RAG Systems</tspan>, high-concurrency scraping farms,
+  </text>
+  <text x="60" y="232" class="sans" font-size="14.5" font-weight="400" fill="#94a3b8">
+    and real-time distributed platforms for industrial &amp; financial enterprises.
+  </text>
+
+  <!-- Focus Tags / Specialization Pills -->
+  <g transform="translate(60, 260)">
+    <!-- Tag 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="130" height="26" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="65" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="500" fill="#38bdf8">Enterprise RAG</text>
+    </g>
+    <!-- Tag 2 -->
+    <g transform="translate(138, 0)">
+      <rect width="168" height="26" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="84" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="500" fill="#38bdf8">High-Throughput APIs</text>
+    </g>
+    <!-- Tag 3 -->
+    <g transform="translate(314, 0)">
+      <rect width="140" height="26" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="70" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="500" fill="#38bdf8">K8s &amp; Cloud Infra</text>
+    </g>
+    <!-- Tag 4 -->
+    <g transform="translate(462, 0)">
+      <rect width="132" height="26" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="66" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="500" fill="#38bdf8">Real-Time Data</text>
+    </g>
+  </g>
+
+  <!-- Quick Social Contact Badges -->
+  <g transform="translate(60, 320)">
+    <!-- GitHub Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="136" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <path d="M16 17 C16 12.58 19.58 9 24 9 C28.42 9 32 12.58 32 17 C32 20.53 29.71 23.53 26.54 24.59 C26.14 24.66 26 24.42 26 24.21 L26 22.78 C23.77 23.26 23.31 21.71 23.31 21.71 C22.95 20.79 22.42 20.55 22.42 20.55 C21.69 20.05 22.48 20.06 22.48 20.06 C23.29 20.12 23.71 20.89 23.71 20.89 C24.43 22.12 25.59 21.77 26.05 21.56 C26.12 21.04 26.33 20.68 26.56 20.48 C24.78 20.28 22.91 19.59 22.91 16.53 C22.91 15.66 23.22 14.95 23.73 14.39 C23.65 14.19 23.38 13.38 23.81 12.28 C23.81 12.28 24.48 12.07 26 13.1 C26.64 12.92 27.32 12.83 28 12.83 C28.68 12.83 29.36 12.92 30 13.1 C31.52 12.07 32.19 12.28 32.19 12.28 C32.62 13.38 32.35 14.19 32.27 14.39 C32.78 14.95 33.09 15.66 33.09 16.53 C33.09 19.6 31.21 20.28 29.43 20.48 C29.72 20.73 29.97 21.22 29.97 21.97 L29.97 24.21 C29.97 24.42 29.83 24.67 29.43 24.59 C26.27 23.53 24 20.53 24 17" fill="#f8fafc"/>
+      <text x="44" y="22" class="sans" font-size="13" font-weight="600" fill="#f8fafc">@disamee</text>
+    </g>
+
+    <!-- LinkedIn Badge -->
+    <g transform="translate(148, 0)">
+      <rect width="112" height="34" rx="8" fill="#0a66c2" fill-opacity="0.2" stroke="#0a66c2" stroke-width="1"/>
+      <text x="56" y="22" text-anchor="middle" class="sans" font-size="13" font-weight="600" fill="#60a5fa">LinkedIn ↗</text>
+    </g>
+
+    <!-- Telegram Badge -->
+    <g transform="translate(270, 0)">
+      <rect width="114" height="34" rx="8" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-width="1"/>
+      <text x="57" y="22" text-anchor="middle" class="sans" font-size="13" font-weight="600" fill="#38bdf8">Telegram ↗</text>
+    </g>
+
+    <!-- NDA Whitepapers Badge -->
+    <g transform="translate(394, 0)">
+      <rect width="198" height="34" rx="8" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+      <circle cx="20" cy="17" r="3.5" fill="#34d399"/>
+      <text x="32" y="22" class="mono" font-size="12" font-weight="600" fill="#34d399">6 Case Studies (NDA)</text>
+    </g>
+  </g>
+
+
+  <!-- ==================== RIGHT COLUMN: ARCHITECTURAL DIAGRAM MESH ==================== -->
+  
+  <g transform="translate(680, 45)">
+    <!-- Main Console Card Container -->
+    <rect width="460" height="325" rx="12" fill="#0a0f1d" stroke="#1e293b" stroke-width="1.5" filter="url(#card-shadow)"/>
+    
+    <!-- Top Bar -->
+    <rect width="460" height="36" rx="12" fill="#0f172a"/>
+    <path d="M 0 36 L 460 36" stroke="#1e293b" stroke-width="1"/>
+    <!-- Window Dots -->
+    <circle cx="20" cy="18" r="4.5" fill="#ef4444" fill-opacity="0.8"/>
+    <circle cx="34" cy="18" r="4.5" fill="#f59e0b" fill-opacity="0.8"/>
+    <circle cx="48" cy="18" r="4.5" fill="#10b981" fill-opacity="0.8"/>
+    <text x="230" y="22" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#64748b" letter-spacing="0.05em">SYSTEM TOPO // HYBRID RAG &amp; K8S</text>
+
+    <!-- Connection Paths -->
+    <path d="M 85 95 L 210 95" stroke="url(#line-grad)" stroke-width="2" class="flow-line"/>
+    <path d="M 85 175 L 210 135" stroke="url(#line-grad)" stroke-width="2" class="flow-line"/>
+    <path d="M 85 245 L 210 165" stroke="url(#line-grad)" stroke-width="2" class="flow-line"/>
+    
+    <path d="M 310 135 L 375 135" stroke="url(#line-grad)" stroke-width="2" class="flow-line"/>
+    <path d="M 375 135 L 375 235" stroke="url(#line-grad)" stroke-width="2" class="flow-line"/>
+
+    <!-- Node 1: Ingestion -->
+    <g transform="translate(20, 70)">
+      <rect width="80" height="48" rx="8" fill="url(#node-grad)" stroke="#38bdf8" stroke-width="1"/>
+      <text x="40" y="22" text-anchor="middle" class="sans" font-size="11" font-weight="700" fill="#f8fafc">DOCS/PDF</text>
+      <text x="40" y="36" text-anchor="middle" class="mono" font-size="9" fill="#94a3b8">Unstructured</text>
+    </g>
+
+    <!-- Node 2: Scraper Farm -->
+    <g transform="translate(20, 150)">
+      <rect width="80" height="48" rx="8" fill="url(#node-grad)" stroke="#38bdf8" stroke-width="1"/>
+      <text x="40" y="22" text-anchor="middle" class="sans" font-size="11" font-weight="700" fill="#f8fafc">SELENIUM</text>
+      <text x="40" y="36" text-anchor="middle" class="mono" font-size="9" fill="#38bdf8">10k+ / day</text>
+    </g>
+
+    <!-- Node 3: Market Feeds -->
+    <g transform="translate(20, 220)">
+      <rect width="80" height="48" rx="8" fill="url(#node-grad)" stroke="#38bdf8" stroke-width="1"/>
+      <text x="40" y="22" text-anchor="middle" class="sans" font-size="11" font-weight="700" fill="#f8fafc">TICKERS</text>
+      <text x="40" y="36" text-anchor="middle" class="mono" font-size="9" fill="#10b981">&lt;100ms WS</text>
+    </g>
+
+    <!-- Center Engine Node: Hybrid RAG Engine -->
+    <g transform="translate(195, 90)">
+      <rect width="130" height="90" rx="10" fill="#0f172a" stroke="#00f0ff" stroke-width="1.5" filter="url(#glow-cyan)"/>
+      <rect width="130" height="90" rx="10" fill="#0b1324" stroke="#00f0ff" stroke-width="1.5"/>
+      <text x="65" y="28" text-anchor="middle" class="mono" font-size="11.5" font-weight="700" fill="#38bdf8">HYBRID RAG</text>
+      
+      <rect x="12" y="38" width="106" height="18" rx="4" fill="#1e293b"/>
+      <text x="65" y="51" text-anchor="middle" class="mono" font-size="9.5" fill="#e2e8f0">BM25 + Qdrant</text>
+      
+      <rect x="12" y="60" width="106" height="18" rx="4" fill="#1e293b"/>
+      <text x="65" y="73" text-anchor="middle" class="mono" font-size="9.5" fill="#34d399">Rerank + Guard</text>
+    </g>
+
+    <!-- Node 4: FastAPI & K8s Delivery -->
+    <g transform="translate(345, 105)">
+      <rect width="95" height="60" rx="8" fill="url(#node-grad)" stroke="#10b981" stroke-width="1.5"/>
+      <text x="47" y="26" text-anchor="middle" class="sans" font-size="11" font-weight="700" fill="#f8fafc">FastAPI</text>
+      <text x="47" y="42" text-anchor="middle" class="mono" font-size="9" fill="#34d399">K8s Gateway</text>
+    </g>
+
+    <!-- Node 5: Real-time UI & Client -->
+    <g transform="translate(345, 210)">
+      <rect width="95" height="60" rx="8" fill="url(#node-grad)" stroke="#a855f7" stroke-width="1"/>
+      <text x="47" y="26" text-anchor="middle" class="sans" font-size="11" font-weight="700" fill="#f8fafc">React 18</text>
+      <text x="47" y="42" text-anchor="middle" class="mono" font-size="9" fill="#c084fc">Live Tickers</text>
+    </g>
+
+    <!-- Live Telemetry Status Bar -->
+    <g transform="translate(20, 285)">
+      <rect width="420" height="26" rx="6" fill="#070b14" stroke="#1e293b" stroke-width="1"/>
+      <circle cx="15" cy="13" r="3.5" fill="#10b981"/>
+      <text x="26" y="17" class="mono" font-size="10" font-weight="500" fill="#64748b">CLUSTER: <tspan fill="#34d399">ONLINE</tspan> | LATENCY: <tspan fill="#38bdf8">14ms</tspan> | RAG ACCURACY: <tspan fill="#f1f5f9">98.4%</tspan></text>
+    </g>
+  </g>
+</svg>
