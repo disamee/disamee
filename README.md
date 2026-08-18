@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://t.me"><img src="https://img.shields.io/badge/Telegram-Chat-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"></a>
-  <a href="mailto:meiram@example.com"><img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://www.linkedin.com/in/dias-meiram-407132313/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://t.me/tapjaa"><img src="https://img.shields.io/badge/Telegram-@tapjaa-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"></a>
+  <a href="mailto:meiramdias@gmail.com"><img src="https://img.shields.io/badge/Email-meiramdias@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://github.com/disamee"><img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
 </p>
 
@@ -199,7 +199,7 @@ flowchart LR
 * **Languages**: English (Professional / Technical), Russian (Native).
 
 <p align="center">
-  <a href="https://linkedin.com"><b>Connect on LinkedIn</b></a> • 
-  <a href="https://t.me"><b>Message on Telegram</b></a> • 
-  <a href="mailto:meiram@example.com"><b>Send Email</b></a>
+  <a href="https://www.linkedin.com/in/dias-meiram-407132313/"><b>Connect on LinkedIn</b></a> • 
+  <a href="https://t.me/tapjaa"><b>Message on Telegram (@tapjaa)</b></a> • 
+  <a href="mailto:meiramdias@gmail.com"><b>meiramdias@gmail.com</b></a>
 </p>
